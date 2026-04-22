@@ -332,7 +332,7 @@ class LinuxReader(BufferedIOBase):
         """Close the file and stop the process"""
 
         if self.popen is None:
-            raise UnsupportedOperation("reader is detached")
+            return
 
         if self.on_close is not None:
             self.on_close(self)
